@@ -16,6 +16,10 @@ body {
   height: 40px;
   margin: 0 5px;
 }
+.container button:active{
+  background-color: transparent;
+  border: none;
+}
 .weather-box {
   text-align: center;
   width: 850px;
