@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClipLoader from "react-spinners/ClipLoader";
@@ -16,7 +15,7 @@ import WeatherButton from './component/WeatherButton';
 function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [aipError, setAPIError] = useState("");
   const cities = ['paris', 'london', 'italy', 'seoul']
   const getCurrentLocation = () => {
@@ -32,8 +31,8 @@ function App() {
   //현재 위치를 기반한 날씨를 알 수 있는 함수
   const getWeatherByCurrentLocation = async(lat, lon) => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=81ebfcd1504f95e9f62303b3c6c3ce53&units=metric`
       setLoading(true)
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=81ebfcd1504f95e9f62303b3c6c3ce53&units=metric`
       let response = await fetch(url);
       let data = await response.json();
       // console.log('data',data)

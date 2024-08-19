@@ -1,0 +1,29 @@
+.button-area > button {
+  width: 160px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: #84caf3;
+  color: #f3f3f3;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 2px 5px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button-area > button:hover {
+  transform: translate(-3.5px, -3.5px);
+  background-color: #84caf3;
+  box-shadow: 4px 3px #FFB3C6;
+  color: #f3f3f3;
+}
+
+.button-area > button.active {
+  background-color: #FFB3C6;
+  color: #f3f3f3;
+}
+
+.button-area > button.active:hover {
+  box-shadow: 4px 3px #84caf3;
+}
